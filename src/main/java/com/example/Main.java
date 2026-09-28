@@ -1,5 +1,7 @@
 package com.example;
 
+import org.springframework.beans.BeanUtils;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,5 +13,13 @@ public class Main {
         book.setTitle("三体II：黑暗森林");
         book.setPrice(99.0);
         System.out.println("修改后：" + book);
+
+        // 步骤9：用无参构造创建第二个对象，用 BeanUtils 拷贝全部属性
+        Book book2 = new Book();
+        BeanUtils.copyProperties(book, book2);
+
+        // 步骤11：打印两个对象——属性相同，但哈希码不同
+        System.out.println("book : " + book);
+        System.out.println("book2: " + book2);
     }
 }
