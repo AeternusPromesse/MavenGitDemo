@@ -20,6 +20,12 @@
             <version>1.18.42</version>
             <scope>provided</scope>
         </dependency>
+        <!-- spring-beans：提供 BeanUtils.copyProperties 方法 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>6.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
